@@ -6,14 +6,17 @@
 import os
 import time
 
-command_0 = "rpicam-still -o /home/biorobot/Desktop/test"
+command_0 = "rpicam-still -n -o /home/biorobot/Desktop/BIOROBOTFMS/test"
 img_indx = 0
 command_1 = ".jpg"
 
-os_command = f"{command_0}{img_indx}{command_1}"
 
 for i in range(5):
     img_indx = i
     os_command = f"{command_0}{img_indx}{command_1}"
     XD = os.system(os_command)
+    
+    print(os_command)
+    print("\n")
     print(XD)
+    print("\n")
